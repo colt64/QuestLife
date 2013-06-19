@@ -15,11 +15,16 @@ public class Starter {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		//Loop to test creating/reading quests
 		boolean keepGoing = true;
 		String newQuest;
 		while(keepGoing){
 		System.out.println("Welcome to QuestLife");
-		System.out.println("You have " + quests.size() + " active quests.");
+		System.out.println("You have " + quests.size() + " active quests:");
+		for(Quest i : quests){
+			System.out.println("Name: " + i.getName() + " Date Created: " + i.getDateCreated());
+		}
 		System.out.print("Create new quest?  ");
 		Scanner input = new Scanner(System.in);
 		newQuest = input.next();
@@ -64,8 +69,5 @@ public static void createQuest(){
 	q.setName(name);
 	q.setDifficulty(diff);
 	q.setComplete(false);
-	
-	System.out.println("Name: " + name + "\n" + "Due Date: " + realDate +   "\n" +  "Difficulty: " + diff);
-	System.out.println("XP Value: " + (xpVal));
 }
 }
