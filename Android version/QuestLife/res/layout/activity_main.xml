@@ -20,4 +20,11 @@
         android:paddingTop="4dp"
         android:textColor="#fff" />
 
+   
+   <fragment android:name="com.example.android.fragments.QuestsFragment"
+              android:id="@+id/quests_fragment"
+              android:layout_weight="1"
+              android:layout_width="0dp"
+              android:layout_height="match_parent" />
+   
 </android.support.v4.view.ViewPager>
